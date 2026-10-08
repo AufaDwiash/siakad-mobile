@@ -1,0 +1,449 @@
+<mxfile host="app.diagrams.net" modified="2026-10-06T11:03:00.000Z" agent="Antigravity" version="24.7.17" type="device">
+  <diagram id="erd-siakad-alyasini-mobile" name="ERD SIAKAD STAI Al-Yasini Mobile">
+    <mxGraphModel dx="1650" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== 1. TABLE: users ==================== -->
+        <mxCell id="tbl_users" value="users (Multi-Role Auth)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#065F46;fontColor=#FFFFFF;strokeColor=#047857;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="760" y="60" width="290" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_users_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_users">
+          <mxGeometry y="32" width="290" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_users_r1_c1" value="PK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#065F46;" vertex="1" parent="tbl_users_r1">
+          <mxGeometry width="45" height="28" as="geometry">
+            <mxRectangle width="45" height="28" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_users_r1_c2" value="id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_users_r1">
+          <mxGeometry x="45" width="245" height="28" as="geometry">
+            <mxRectangle width="245" height="28" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_users_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_users">
+          <mxGeometry y="60" width="290" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_users_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_users_r2">
+          <mxGeometry width="45" height="190" as="geometry">
+            <mxRectangle width="45" height="190" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_users_r2_c2" value="identifier : VARCHAR(30) [NIM/NIDN/PMB]&#xa;name : VARCHAR(120)&#xa;email : VARCHAR(120)&#xa;role : ENUM(mahasiswa,dosen,kaprodi,pmb)&#xa;prodi : VARCHAR(100)&#xa;academic_status : VARCHAR(50)&#xa;semester : INT&#xa;sanctum_token : VARCHAR(255)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_users_r2">
+          <mxGeometry x="45" width="245" height="190" as="geometry">
+            <mxRectangle width="245" height="190" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 2. TABLE: tagihan_ukt ==================== -->
+        <mxCell id="tbl_ukt" value="tagihan_ukt" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#1E3A8A;fontColor=#FFFFFF;strokeColor=#1D4ED8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="290" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ukt_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_ukt">
+          <mxGeometry y="32" width="290" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ukt_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#1E3A8A;" vertex="1" parent="tbl_ukt_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ukt_r1_c2" value="id : BIGINT&#xa;user_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_ukt_r1">
+          <mxGeometry x="45" width="245" height="44" as="geometry">
+            <mxRectangle width="245" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ukt_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_ukt">
+          <mxGeometry y="76" width="290" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ukt_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_ukt_r2">
+          <mxGeometry width="45" height="164" as="geometry">
+            <mxRectangle width="45" height="164" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ukt_r2_c2" value="nomor_invoice : VARCHAR(50)&#xa;tahun_ajaran : VARCHAR(30)&#xa;nama_tagihan : VARCHAR(120)&#xa;total_tagihan : BIGINT&#xa;total_terbayar : BIGINT&#xa;status_lunas : BOOLEAN&#xa;va_bsi : VARCHAR(30)&#xa;va_bri : VARCHAR(30)&#xa;snap_token : VARCHAR(100)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_ukt_r2">
+          <mxGeometry x="45" width="245" height="164" as="geometry">
+            <mxRectangle width="245" height="164" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 3. TABLE: cicilan_tagihan ==================== -->
+        <mxCell id="tbl_cicilan" value="cicilan_tagihan" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#1E3A8A;fontColor=#FFFFFF;strokeColor=#1D4ED8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="290" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_cicilan_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_cicilan">
+          <mxGeometry y="32" width="290" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_cicilan_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#1E3A8A;" vertex="1" parent="tbl_cicilan_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_cicilan_r1_c2" value="id : BIGINT&#xa;tagihan_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_cicilan_r1">
+          <mxGeometry x="45" width="245" height="44" as="geometry">
+            <mxRectangle width="245" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_cicilan_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_cicilan">
+          <mxGeometry y="76" width="290" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_cicilan_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_cicilan_r2">
+          <mxGeometry width="45" height="134" as="geometry">
+            <mxRectangle width="45" height="134" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_cicilan_r2_c2" value="termin_ke : INT&#xa;keterangan : VARCHAR(120)&#xa;nominal : BIGINT&#xa;jatuh_tempo : DATE&#xa;is_paid : BOOLEAN&#xa;tanggal_bayar : DATE&#xa;metode_bayar : VARCHAR(50)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_cicilan_r2">
+          <mxGeometry x="45" width="245" height="134" as="geometry">
+            <mxRectangle width="245" height="134" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 4. TABLE: krs_mahasiswa ==================== -->
+        <mxCell id="tbl_krs" value="krs_mahasiswa (Perwalian)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#065F46;fontColor=#FFFFFF;strokeColor=#047857;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="440" y="390" width="290" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_krs">
+          <mxGeometry y="32" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_r1_c1" value="PK&#xa;FK1&#xa;FK2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#065F46;" vertex="1" parent="tbl_krs_r1">
+          <mxGeometry width="45" height="60" as="geometry">
+            <mxRectangle width="45" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_r1_c2" value="krs_id : BIGINT&#xa;mahasiswa_id : BIGINT&#xa;dosen_wali_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_krs_r1">
+          <mxGeometry x="45" width="245" height="60" as="geometry">
+            <mxRectangle width="245" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_krs">
+          <mxGeometry y="92" width="290" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_krs_r2">
+          <mxGeometry width="45" height="138" as="geometry">
+            <mxRectangle width="45" height="138" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_r2_c2" value="semester : INT&#xa;ips_lalu : DECIMAL(3,2)&#xa;batas_max_sks : INT (Max 24)&#xa;total_sks_diajukan : INT&#xa;status : ENUM(draft,diajukan,disetujui,ditolak)&#xa;catatan_wali : TEXT&#xa;waktu_pengajuan : DATETIME" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_krs_r2">
+          <mxGeometry x="45" width="245" height="138" as="geometry">
+            <mxRectangle width="245" height="138" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 5. TABLE: kelas_ditawarkan ==================== -->
+        <mxCell id="tbl_kelas" value="kelas_ditawarkan (Jadwal Kuliah)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#065F46;fontColor=#FFFFFF;strokeColor=#047857;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="800" y="390" width="290" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_kelas_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_kelas">
+          <mxGeometry y="32" width="290" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_kelas_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#065F46;" vertex="1" parent="tbl_kelas_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_kelas_r1_c2" value="id : BIGINT&#xa;dosen_pengajar_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_kelas_r1">
+          <mxGeometry x="45" width="245" height="44" as="geometry">
+            <mxRectangle width="245" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_kelas_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_kelas">
+          <mxGeometry y="76" width="290" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_kelas_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_kelas_r2">
+          <mxGeometry width="45" height="174" as="geometry">
+            <mxRectangle width="45" height="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_kelas_r2_c2" value="kode_mk : VARCHAR(20)&#xa;nama_mk : VARCHAR(120)&#xa;sks : INT&#xa;semester_paket : INT&#xa;kelas : VARCHAR(20)&#xa;hari : VARCHAR(15)&#xa;jam_mulai : TIME&#xa;jam_selesai : TIME&#xa;ruangan : VARCHAR(80)&#xa;kuota_terisi : INT&#xa;kuota_maksimal : INT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_kelas_r2">
+          <mxGeometry x="45" width="245" height="174" as="geometry">
+            <mxRectangle width="245" height="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 6. TABLE: krs_detail_khs ==================== -->
+        <mxCell id="tbl_krs_detail" value="krs_detail_khs (Kontrak MK &amp; Nilai)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#065F46;fontColor=#FFFFFF;strokeColor=#047857;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="440" y="710" width="290" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_krs_detail">
+          <mxGeometry y="32" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r1_c1" value="PK&#xa;FK1&#xa;FK2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#065F46;" vertex="1" parent="tbl_krs_detail_r1">
+          <mxGeometry width="45" height="60" as="geometry">
+            <mxRectangle width="45" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r1_c2" value="id : BIGINT&#xa;krs_id : BIGINT&#xa;kelas_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_krs_detail_r1">
+          <mxGeometry x="45" width="245" height="60" as="geometry">
+            <mxRectangle width="245" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_krs_detail">
+          <mxGeometry y="92" width="290" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_krs_detail_r2">
+          <mxGeometry width="45" height="93" as="geometry">
+            <mxRectangle width="45" height="93" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_krs_detail_r2_c2" value="nilai_angka : DECIMAL(5,2)&#xa;nilai_huruf : VARCHAR(2)&#xa;indeks_bobot : DECIMAL(3,2)&#xa;ips_semester : DECIMAL(3,2)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_krs_detail_r2">
+          <mxGeometry x="45" width="245" height="93" as="geometry">
+            <mxRectangle width="245" height="93" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 7. TABLE: presensi_qr_gps ==================== -->
+        <mxCell id="tbl_presensi" value="presensi_qr_gps (Haversine &amp; Anti-Mock)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#065F46;fontColor=#FFFFFF;strokeColor=#047857;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="800" y="710" width="290" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_presensi_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_presensi">
+          <mxGeometry y="32" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_presensi_r1_c1" value="PK&#xa;FK1&#xa;FK2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#065F46;" vertex="1" parent="tbl_presensi_r1">
+          <mxGeometry width="45" height="60" as="geometry">
+            <mxRectangle width="45" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_presensi_r1_c2" value="id : BIGINT&#xa;kelas_id : BIGINT&#xa;mahasiswa_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_presensi_r1">
+          <mxGeometry x="45" width="245" height="60" as="geometry">
+            <mxRectangle width="245" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_presensi_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_presensi">
+          <mxGeometry y="92" width="290" height="133" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_presensi_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_presensi_r2">
+          <mxGeometry width="45" height="133" as="geometry">
+            <mxRectangle width="45" height="133" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_presensi_r2_c2" value="pertemuan_ke : INT&#xa;qr_token : VARCHAR(100)&#xa;latitude : DOUBLE&#xa;longitude : DOUBLE&#xa;is_mock_location : BOOLEAN&#xa;status_kehadiran : ENUM(Hadir,Izin,Sakit,Alpha)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_presensi_r2">
+          <mxGeometry x="45" width="245" height="133" as="geometry">
+            <mxRectangle width="245" height="133" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 8. TABLE: skripsi_mahasiswa ==================== -->
+        <mxCell id="tbl_skripsi" value="skripsi_mahasiswa (Kaprodi &amp; Dosen)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#7C2D12;fontColor=#FFFFFF;strokeColor=#9A3412;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="390" width="310" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_skripsi_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_skripsi">
+          <mxGeometry y="32" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_skripsi_r1_c1" value="PK&#xa;FK1&#xa;FK2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#7C2D12;" vertex="1" parent="tbl_skripsi_r1">
+          <mxGeometry width="45" height="60" as="geometry">
+            <mxRectangle width="45" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_skripsi_r1_c2" value="id : BIGINT&#xa;mahasiswa_id : BIGINT&#xa;dosen_pembimbing_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_skripsi_r1">
+          <mxGeometry x="45" width="265" height="60" as="geometry">
+            <mxRectangle width="265" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_skripsi_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_skripsi">
+          <mxGeometry y="92" width="310" height="143" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_skripsi_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_skripsi_r2">
+          <mxGeometry width="45" height="143" as="geometry">
+            <mxRectangle width="45" height="143" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_skripsi_r2_c2" value="judul_skripsi : TEXT&#xa;tahap : VARCHAR(100)&#xa;jumlah_bimbingan_acc : INT&#xa;target_minimal_bimbingan : INT (Default 8)&#xa;is_proposal_approved_kaprodi : BOOLEAN&#xa;is_acc_sidang_munaqasyah : BOOLEAN&#xa;tanggal_kirim : DATETIME" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_skripsi_r2">
+          <mxGeometry x="45" width="265" height="143" as="geometry">
+            <mxRectangle width="265" height="143" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 9. TABLE: log_bimbingan_skripsi ==================== -->
+        <mxCell id="tbl_bimbingan" value="log_bimbingan_skripsi" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#7C2D12;fontColor=#FFFFFF;strokeColor=#9A3412;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="710" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_bimbingan">
+          <mxGeometry y="32" width="310" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#7C2D12;" vertex="1" parent="tbl_bimbingan_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r1_c2" value="id : BIGINT&#xa;skripsi_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_bimbingan_r1">
+          <mxGeometry x="45" width="265" height="44" as="geometry">
+            <mxRectangle width="265" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_bimbingan">
+          <mxGeometry y="76" width="310" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_bimbingan_r2">
+          <mxGeometry width="45" height="124" as="geometry">
+            <mxRectangle width="45" height="124" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_bimbingan_r2_c2" value="pertemuan_ke : INT&#xa;tanggal : DATE&#xa;bab_bahasan : VARCHAR(60)&#xa;catatan_mahasiswa : TEXT&#xa;balasan_dosen : TEXT&#xa;is_acc : BOOLEAN" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_bimbingan_r2">
+          <mxGeometry x="45" width="265" height="124" as="geometry">
+            <mxRectangle width="265" height="124" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 10. TABLE: pendaftar_pmb ==================== -->
+        <mxCell id="tbl_pmb" value="pendaftar_pmb (Calon Mahasiswa)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#5B21B6;fontColor=#FFFFFF;strokeColor=#6D28D9;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="60" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_pmb_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_pmb">
+          <mxGeometry y="32" width="310" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_pmb_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#5B21B6;" vertex="1" parent="tbl_pmb_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_pmb_r1_c2" value="id : BIGINT&#xa;user_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_pmb_r1">
+          <mxGeometry x="45" width="265" height="44" as="geometry">
+            <mxRectangle width="265" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_pmb_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_pmb">
+          <mxGeometry y="76" width="310" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_pmb_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_pmb_r2">
+          <mxGeometry width="45" height="174" as="geometry">
+            <mxRectangle width="45" height="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_pmb_r2_c2" value="nomor_pendaftaran : VARCHAR(40)&#xa;gelombang : VARCHAR(60)&#xa;pilihan_prodi_1 : VARCHAR(100)&#xa;pilihan_prodi_2 : VARCHAR(100)&#xa;current_step_index : INT (0..5)&#xa;nilai_ujian_seleksi : INT&#xa;status_kelulusan : VARCHAR(40)&#xa;tagihan_daftar_ulang : BIGINT&#xa;is_daftar_ulang_lunas : BOOLEAN&#xa;nim_terbit : VARCHAR(20)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_pmb_r2">
+          <mxGeometry x="45" width="265" height="174" as="geometry">
+            <mxRectangle width="265" height="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 11. TABLE: berkas_pmb ==================== -->
+        <mxCell id="tbl_berkas_pmb" value="berkas_pmb" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#5B21B6;fontColor=#FFFFFF;strokeColor=#6D28D9;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="390" width="310" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_berkas_pmb">
+          <mxGeometry y="32" width="310" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r1_c1" value="PK&#xa;FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#5B21B6;" vertex="1" parent="tbl_berkas_pmb_r1">
+          <mxGeometry width="45" height="44" as="geometry">
+            <mxRectangle width="45" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r1_c2" value="id : BIGINT&#xa;pendaftar_pmb_id : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_berkas_pmb_r1">
+          <mxGeometry x="45" width="265" height="44" as="geometry">
+            <mxRectangle width="265" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_berkas_pmb">
+          <mxGeometry y="76" width="310" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_berkas_pmb_r2">
+          <mxGeometry width="45" height="109" as="geometry">
+            <mxRectangle width="45" height="109" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_berkas_pmb_r2_c2" value="nama_berkas : VARCHAR(100)&#xa;wajib : BOOLEAN&#xa;status : ENUM(Terverifikasi,Ditolak,Belum)&#xa;alasan_penolakan : TEXT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_berkas_pmb_r2">
+          <mxGeometry x="45" width="265" height="109" as="geometry">
+            <mxRectangle width="265" height="109" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== 12. TABLE: cached_ktm_digital (Room SQLite) ==================== -->
+        <mxCell id="tbl_ktm" value="cached_ktm_digital (Room Local Cache)" style="shape=table;startSize=32;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#374151;fontColor=#FFFFFF;strokeColor=#4B5563;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="80" y="710" width="290" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ktm_r1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="tbl_ktm">
+          <mxGeometry y="32" width="290" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ktm_r1_c1" value="PK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;fontColor=#374151;" vertex="1" parent="tbl_ktm_r1">
+          <mxGeometry width="45" height="32" as="geometry">
+            <mxRectangle width="45" height="32" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ktm_r1_c2" value="nim : VARCHAR(20)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;fontStyle=1;overflow=hidden;" vertex="1" parent="tbl_ktm_r1">
+          <mxGeometry x="45" width="245" height="32" as="geometry">
+            <mxRectangle width="245" height="32" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ktm_r2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="tbl_ktm">
+          <mxGeometry y="64" width="290" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_ktm_r2_c1" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;overflow=hidden;" vertex="1" parent="tbl_ktm_r2">
+          <mxGeometry width="45" height="121" as="geometry">
+            <mxRectangle width="45" height="121" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl_ktm_r2_c2" value="nama_mahasiswa : VARCHAR(120)&#xa;prodi : VARCHAR(100)&#xa;angkatan : VARCHAR(10)&#xa;masa_berlaku : VARCHAR(30)&#xa;qr_payload : VARCHAR(255)&#xa;updated_at_epoch : BIGINT" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=8;overflow=hidden;fontSize=11;" vertex="1" parent="tbl_ktm_r2">
+          <mxGeometry x="45" width="245" height="121" as="geometry">
+            <mxRectangle width="245" height="121" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==================== RELATIONSHIPS (CROW'S FOOT) ==================== -->
+        <!-- 1. users (1) -> (N) tagihan_ukt -->
+        <mxCell id="rel_user_ukt" value="1 : N (Tagihan)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#1E3A8A;" edge="1" parent="1" source="tbl_users" target="tbl_ukt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 2. tagihan_ukt (1) -> (N) cicilan_tagihan -->
+        <mxCell id="rel_ukt_cicilan" value="1 : N (Termin)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#1E3A8A;" edge="1" parent="1" source="tbl_ukt" target="tbl_cicilan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 3. users (1) -> (N) krs_mahasiswa -->
+        <mxCell id="rel_user_krs" value="1 : N (Pengajuan &amp; Perwalian)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#065F46;" edge="1" parent="1" source="tbl_users" target="tbl_krs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 4. users (1) -> (N) kelas_ditawarkan -->
+        <mxCell id="rel_user_kelas" value="1 : N (Dosen Pengampu)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#065F46;" edge="1" parent="1" source="tbl_users" target="tbl_kelas">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 5. krs_mahasiswa (1) -> (N) krs_detail_khs -->
+        <mxCell id="rel_krs_detail" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#065F46;" edge="1" parent="1" source="tbl_krs" target="tbl_krs_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 6. kelas_ditawarkan (1) -> (N) krs_detail_khs -->
+        <mxCell id="rel_kelas_detail" value="1 : N (Ambil Kelas)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#065F46;" edge="1" parent="1" source="tbl_kelas" target="tbl_krs_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 7. kelas_ditawarkan (1) -> (N) presensi_qr_gps -->
+        <mxCell id="rel_kelas_presensi" value="1 : N (Scan QR)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#065F46;" edge="1" parent="1" source="tbl_kelas" target="tbl_presensi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 8. users (1) -> (N) skripsi_mahasiswa -->
+        <mxCell id="rel_user_skripsi" value="1 : N (Skripsi &amp; Pembimbing)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#7C2D12;" edge="1" parent="1" source="tbl_users" target="tbl_skripsi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 9. skripsi_mahasiswa (1) -> (N) log_bimbingan_skripsi -->
+        <mxCell id="rel_skripsi_bimbingan" value="1 : N (Min 8x ACC)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#7C2D12;" edge="1" parent="1" source="tbl_skripsi" target="tbl_bimbingan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 10. users (1) -> (1) pendaftar_pmb -->
+        <mxCell id="rel_user_pmb" value="1 : 1 (Akun PMB)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;strokeWidth=2;strokeColor=#5B21B6;" edge="1" parent="1" source="tbl_users" target="tbl_pmb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 11. pendaftar_pmb (1) -> (N) berkas_pmb -->
+        <mxCell id="rel_pmb_berkas" value="1 : N (Upload Berkas)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=2;strokeColor=#5B21B6;" edge="1" parent="1" source="tbl_pmb" target="tbl_berkas_pmb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 12. users (1) -> (1) cached_ktm_digital -->
+        <mxCell id="rel_user_ktm" value="1 : 1 (Offline Cache)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;strokeWidth=2;strokeColor=#374151;" edge="1" parent="1" source="tbl_users" target="tbl_ktm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="185" />
+              <mxPoint x="405" y="802" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
